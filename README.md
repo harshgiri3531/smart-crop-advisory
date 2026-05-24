@@ -174,7 +174,7 @@ http://127.0.0.1:5000
 
 ## 📊 Prediction Result & 🤖 AI Crop Assistant
 
-<img width="100%" src="https://github.com/harshgiri3531/smart-crop-advisory/raw/main/static/Screenshot%20(31).png">
+<img width="100%" src="https://github.com/harshgiri3531/smart-crop-advisory/blob/main/static/Screenshot%20(34).png">
 
 ---
 
