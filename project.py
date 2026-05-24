@@ -57,7 +57,7 @@ def home():
                 user_input = pd.DataFrame({"NDVI": [input_ndvi]})
                 prediction = round(model.predict(user_input)[0], 2)
 
-                if input_ndvi > 0.86:
+                if input_ndvi > 0.6:
                     crop_status = (
                         "🟢 HEALTHY <br>"
                         " 👉 The crop is in good condition. Leaves have healthy green color "
@@ -71,7 +71,7 @@ def home():
                         "➡️Watch early signs of pest infestation during evening hours."
                     )
 
-                elif input_ndvi > 0.78:
+                elif input_ndvi > 0.3:
                     crop_status =( 
                         "🟡 MODERATE <br>"
                         " 👉 The crop is stable, but some parts of the field show early signs of stress."
