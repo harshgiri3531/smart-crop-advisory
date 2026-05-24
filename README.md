@@ -174,7 +174,7 @@ http://127.0.0.1:5000
 
 ## 📊 Prediction Result & 🤖 AI Crop Assistant
 
-<img width="100%" src="C:\Users\gosai\OneDrive\Pictures\Screenshots\Screenshot (31).png">
+<img width="100%" src="[C:\Users\gosai\OneDrive\Pictures\Screenshots\Screenshot (31).png](https://github.com/harshgiri3531/smart-crop-advisory/raw/main/static/Screenshot%20(31).png)">
 
 ---
 
@@ -214,11 +214,13 @@ GROQ_API_KEY=your_api_key_here
 
 ## Harsh Giri
 
-### AI/ML Developer | Flask Developer | Smart Agriculture Enthusiast
+### AI/ML Enthusiast | Flask Developer | Python Programmer
 
-- 🌐 Passionate about AI-powered agricultural systems
-- 🚀 Interested in Machine Learning & Intelligent Applications
-- 💡 Building real-world AI solutions
+- 🤖 Passionate about Artificial Intelligence & Machine Learning
+- 🚀 Building real-world intelligent applications using Python & Flask
+- 💡 Interested in AI automation, predictive systems & smart technologies
+- 📊 Exploring data-driven solutions and intelligent web applications
+- 🌱 Worked on AI-based Smart Crop Advisory & Prediction System
 
 ---
 
