@@ -168,7 +168,7 @@ http://127.0.0.1:5000
 
 ## 🏠 Home Interface
 
-<img width="100%" src="YOUR_SCREENSHOT_LINK_HERE">
+<img width="100%" src="https://github.com/harshgiri3531/smart-crop-advisory/raw/main/static/Screenshot%20(31).png">
 
 ---
 
