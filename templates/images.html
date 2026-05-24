@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop & NDVI Sample Images</title>
+
+    <style>
+        body { font-family: Arial; padding: 20px; }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📸 Graphs Which Shows Relations</h1>
+<p>These images help farmers understand NDVI and crop health conditions visually.</p>
+
+<div class="container">
+    {% for img in images %}
+    <div>
+        <img src="{{ url_for('static', filename=img) }}">
+    </div>
+    {% endfor %}
+</div>
+
+<br>
+<a href="/knowmore">⬅️ Back to Know More</a>
+
+</body>
+</html>

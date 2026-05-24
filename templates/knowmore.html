@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Know More - NDVI & Crop Health</title>
+
+    <style>
+        body {
+            font-family: Poppins, Arial;
+            margin: 0;
+            padding: 40px;
+            background-image: url('{{ url_for("static", filename="image.jpg") }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #083c21;
+        }
+
+        .box {
+            background: rgba(255,255,255,0.75);
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: auto;
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0b3d2e;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #1b5e20;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2ecc71;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>📘 Know More About NDVI & Crop Health</h1>
+
+    <h2>🌱 What is NDVI?</h2>
+<p>NDVI (Normalized Difference Vegetation Index) is a key vegetation index used to measure the health and density of crops using satellite imagery.</p>
+<p>NDVI values range from <strong>-1 to +1</strong>.</p>
+<p>For agricultural applications, the useful NDVI range is generally <strong>0.0 to +1.0</strong>.</p>
+
+<h2>🛰 How Does NDVI Work?</h2>
+<p>Healthy vegetation reflects more Near-Infrared (NIR) light and absorbs more Red light from the sun.</p>
+<p>The formula for NDVI is:</p>
+<p><strong>NDVI = (NIR - Red) / (NIR + Red)</strong></p>
+<p>Higher NDVI values indicate healthier and greener vegetation, while lower values show stressed crops or bare soil.</p>
+
+<h2>🌳 NDVI Value Interpretation</h2>
+<p><strong>🟢 Healthy Crops:</strong> Good crop growth, proper irrigation, and sufficient nutrients.</p>
+<p><strong>🟡 Moderate Condition:</strong> Some stress in plants; check soil moisture, nutrient level, and pest presence.</p>
+<p><strong>🔴 Stressed Crops:</strong> Weak plant health; immediate irrigation, nutrients, and monitoring required.</p>
+
+<h2>📌 Why is NDVI Important?</h2>
+<ul>
+    <li>Helps monitor crop health throughout the season</li>
+    <li>Detects stress early (water, nutrient deficiency, pests)</li>
+    <li>Improves resource use and reduces farming cost</li>
+    <li>Supports better yield prediction and decision-making</li>
+</ul>
+
+
+    <h2>📊 View First 50 Rows of Dataset</h2>
+    <p><a href="/data50">➡ Click here to see first 50 rows</a></p>
+   <p><a href="/images" style="color: green; font-weight: bold;">
+    📸 Here Are The Some Graphs Which Shows Relation With time 
+</a></p>
+
+    <br>
+    <h2>📄 Analysis Of a Multispectral Image</h2>
+    <p>(All Information Obtained Through QGIS Software )</p>
+
+<iframe src="{{ url_for('static', filename='Document.pdf') }}"
+        width="100%" 
+        height="600px"
+        style="border:2px solid #ccc; border-radius:10px;">
+</iframe>
+<br><br>
+    <p><a href="/">⬅️ Back to Dashboard</a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Crop Advisory</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", Arial, sans-serif;
+            height: 100vh;
+
+          
+            background-image: url('{{ url_for("static", filename="image.jpg") }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .glass-box {
+            width: 90%;
+            max-width: 700px;
+            padding: 35px;
+            text-align: center;
+
+            /* Glassmorphism */
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+            color: #083c21;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0b3d2e;
+            white-space: nowrap;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        input {
+            padding: 12px;
+            width: 70%;
+            max-width: 260px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #2ecc71;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #27ae60;
+            transform: scale(1.05);
+        }
+
+        .result-box {
+            margin-top: 20px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.45);
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 4px solid #2ecc71;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #1b5e20;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="glass-box">
+      <a href="/knowmore" style="float:right; font-weight:bold; color:#1b5e20;">
+    📘 Know More
+</a>
+
+  <h1>🌾 Smart Crop Health Advisory & Yield Prediction 🌾</h1>
+    <p>AI-Powdered Crop Insights using NVDI & Machine Learning</p>
+
+    <form method="post">
+        <label><strong>🌱 Enter NDVI Value (0.0 - 1.0):</strong></label><br><br>
+
+        <input type="number" name="ndvi" step="0.01" min="0" max="1" required>
+        <br><br>
+
+        <button type="submit">🔍 Predict</button>
+    </form>
+
+    {% if prediction != "" %}
+    <div class="result-box">
+        <p><span class="label">📊 Predicted Yield:</span> {{prediction}} units</p>
+        <p><span class="label">🌱Crop Health:</span> {{crop_status|safe}}</p>
+                    
+        <p><span class="label">📌Farmer Advisory:</span> {{advice|safe}}</p>
+        <p><span class="label">⭐ Expected Yield:</span> {{yield_status}}</p>
+    </div>
+    {% endif %}
+    <hr>
+
+<h3>💬 Ask AI Crop Assistant</h3>
+
+<form method="POST">
+    <input type="text" name="message" placeholder="Ask your farming question..." required>
+    <button type="submit">Ask</button>
+</form>
+
+{% if reply %}
+<div class="result-box">
+    <p><span class="label">👨‍🌾 Question:</span> {{user_msg}}</p>
+    <p><span class="label">🤖 AI Answer:</span> {{reply}}</p>
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
