@@ -1,4 +1,4 @@
-##           Smart Crop Health Advisory & Yield Prediction System
+# <h1 align="center"> Smart Crop Health Advisory & Yield Prediction System</h1>
 
 <div align="center">
 
@@ -11,7 +11,7 @@
 ### 🚀 AI-Powered Crop Health Monitoring using NDVI & Machine Learning
 
 </div>
-
+   
 ---
 
 # 📌 Overview
